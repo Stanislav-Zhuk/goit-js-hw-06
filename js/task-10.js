@@ -52,6 +52,7 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   boxesContainer.innerHTML = '';
+  inputEl.value = '';
 }
 
 createBtn.addEventListener('click', () => {
