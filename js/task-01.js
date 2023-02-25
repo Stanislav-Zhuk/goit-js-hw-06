@@ -50,13 +50,43 @@
 // Category: Technologies
 // Elements: 5
 
+
+// Варіант #1
+
+// const categoriesList = document.querySelector('#categories');
+// const categoriesItems = categoriesList.querySelectorAll('.item');
+
+// console.log(`Number of categories: ${categoriesItems.length}`);
+
+// categoriesItems.forEach(item => {
+//   const categoryTitle = item.querySelector('h2').textContent;
+//   const categoryElements = item.querySelectorAll('li').length;
+//   console.log(`Category: ${categoryTitle}\nElements: ${categoryElements}`);
+// });
+
+// Варіант #2
+
+// const categoriesList = document.querySelector('#categories');
+// const categoriesItems = categoriesList.children;
+
+// console.log(`Number of categories: ${categoriesItems.length}`);
+
+// for (const item of categoriesItems) {
+//   const categoryTitle = item.children[0].textContent;
+//   const categoryElements = item.children[1].children.length;
+
+//   console.log(`Category: ${categoryTitle}\nElements: ${categoryElements}`);
+// }
+
+// Варіант #3
+
 const categoriesList = document.querySelector('#categories');
 const categoriesItems = categoriesList.querySelectorAll('.item');
 
 console.log(`Number of categories: ${categoriesItems.length}`);
 
 categoriesItems.forEach(item => {
-  const categoryTitle = item.querySelector('h2').textContent;
-  const categoryElements = item.querySelectorAll('li').length;
+  const categoryTitle = item.children[0].textContent;
+  const categoryElements = item.children[1].children.length;
   console.log(`Category: ${categoryTitle}\nElements: ${categoryElements}`);
 });
